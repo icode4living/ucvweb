@@ -1,0 +1,29 @@
+
+$margin: 30px;
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
+/* Color Theme Swatches in Hex */
+$Wacomet-1-hex: #0554F2;
+$Wacomet-2-hex: #056CF2;
+$Wacomet-3-hex: #034AA6;
+$Wacomet-4-hex: #07DBF2;
+$Wacomet-5-hex: #05F2F2;
+
+/* Color Theme Swatches in RGBA */
+$Wacomet-1-rgba: rgba(4,83,242, 1);
+$Wacomet-2-rgba: rgba(4,107,242, 1);
+$Wacomet-3-rgba: rgba(3,73,165, 1);
+$Wacomet-4-rgba: rgba(7,218,242, 1);
+$Wacomet-5-rgba: rgba(4,242,242, 1);
+
+/* Color Theme Swatches in HSLA */
+$Wacomet-1-hsla: hsla(219, 96, 48, 1);
+$Wacomet-2-hsla: hsla(213, 96, 48, 1);
+$Wacomet-3-hsla: hsla(213, 96, 33, 1);
+$Wacomet-4-hsla: hsla(185, 94, 48, 1);
+$Wacomet-5-hsla: hsla(180, 96, 48, 1);
+
+
