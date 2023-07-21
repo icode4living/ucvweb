@@ -1,10 +1,4 @@
 
-$margin: 30px;
-:root { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  :root { font-family: 'Inter var', sans-serif; }
-}
-
 /* Color Theme Swatches in Hex */
 $Wacomet-1-hex: #0554F2;
 $Wacomet-2-hex: #056CF2;
@@ -12,18 +6,153 @@ $Wacomet-3-hex: #034AA6;
 $Wacomet-4-hex: #07DBF2;
 $Wacomet-5-hex: #05F2F2;
 
-/* Color Theme Swatches in RGBA */
+/* Color Theme Swatches in RGBA 
 $Wacomet-1-rgba: rgba(4,83,242, 1);
 $Wacomet-2-rgba: rgba(4,107,242, 1);
 $Wacomet-3-rgba: rgba(3,73,165, 1);
 $Wacomet-4-rgba: rgba(7,218,242, 1);
 $Wacomet-5-rgba: rgba(4,242,242, 1);
 
-/* Color Theme Swatches in HSLA */
+/* Color Theme Swatches in HSLA *
 $Wacomet-1-hsla: hsla(219, 96, 48, 1);
 $Wacomet-2-hsla: hsla(213, 96, 48, 1);
 $Wacomet-3-hsla: hsla(213, 96, 33, 1);
 $Wacomet-4-hsla: hsla(185, 94, 48, 1);
-$Wacomet-5-hsla: hsla(180, 96, 48, 1);
+$Wacomet-5-hsla: hsla(180, 96, 48, 1);*/
 
+$header-size: 2.5em;
+$margin-val: 30px;
+$default-font-size:16px;
+$default-line-height: 32px;
+$card-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$margin: 30px;
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; 
+    font-size: $default-font-size;
 
+  }
+
+}
+
+/**mixings*/
+@mixin primary-bg{
+  background-color: $Wacomet-4-hex;
+  color: $Wacomet-1-hex;
+}
+@mixin theme-bg{
+  background-color: $Wacomet-1-hex;
+  color: #fff;
+}
+body,html{
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.fixed{
+  position: fixed;
+}
+.left{
+  position: absolute;
+  left: $margin-val;
+}
+.right{
+  position: absolute;
+  right: $margin-val;
+}
+.list-item{
+  list-style: none;
+}
+.top-nav-menu{
+padding: 12px 16px;
+display: inline-block;
+i{
+  color: $Wacomet-1-hex;
+}
+}
+.top-nav{
+  width: 100%;
+  height: 50px;
+  @include primary-bg();
+  padding: 10px;
+  position: relative;
+}
+.top-contact{
+  border-left: 1px solid $Wacomet-1-hex;
+}
+.top-social{
+  margin-left: 20px;
+}
+.main-nav{
+background-color: $Wacomet-1-hex;
+}
+.nav-menu{
+  padding-left: $margin-val;
+  a{
+    color: #fff;
+    padding: 12px 16px;
+  }
+}
+.link{
+  text-decoration: none;
+}
+.drop-down-container{
+  display: none;
+  background-color: #ccc;
+  box-sizing: border-box;
+  box-shadow:$card-shadow;
+  width: fit-content;
+}
+.drop-down:hover .drop-down-container{
+display: block;
+transition: display 0.3s ease-out;
+animation: drop-down 0.3s ease-out ;
+}
+.drop-down-link{
+  display: inline-block;
+  color:#121212;
+  border-bottom: 1px solid #ccc;
+}
+.cta-btn{
+  background-color: $Wacomet-4-hex;
+  color: #ccc;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 10px;
+}
+.hero-header{
+  height: 100vh;
+  width: 100vw;
+  background-color: $Wacomet-3-hex;
+}
+.hero-text-container{
+  
+  justify-content: center;
+
+  h1{
+    color: #ccc;
+    font-size: $header-size;
+  }
+}
+
+.hero-text-container h1 span.typed-text{
+  font-size: $header-size;
+  color: $Wacomet-4-hex;
+}
+.hero-cta{
+  background-color: $Wacomet-1-hex;
+}
+/** Animation rules*/
+@keyframes drop-down {
+  to{
+    display: block;
+  }
+}
+
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
