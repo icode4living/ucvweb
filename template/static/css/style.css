@@ -1,0 +1,35 @@
+:root {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+    font-size: 16px;
+  }
+}
+/** Animation rules*/
+@keyframes drop-down {
+  to {
+    display: block;
+  }
+}
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
