@@ -26,7 +26,7 @@ $margin: 30px;
 }
 @mixin secondary-bg{
   background-color: $secondary-color;
-  color: #ffff;
+  color: $main-color;
 }
 
 @mixin dark-bg{
@@ -95,6 +95,15 @@ left:2rem;
 .top-link:hover{
   color: $primary-color;
 }
+.container{
+  margin-left: $margin-val;
+}
+.title{
+  margin: 0 auto;
+}
+.center{
+  
+}
 /**Main nav**/
 .main-nav{
   @include primary-bg();
@@ -158,9 +167,12 @@ height: 100%;
 .hero-conatianer{
   position: absolute;
   top:25%;
-  left: $margin-val;
-  width: calc(100% - 20%);
+  left: 10%;
+  //width: calc(100% - 20%);
+  
   h1{
+    text-align: center;
+
     color: $main-color;
     font-size: 3.5em;
   }
@@ -179,7 +191,10 @@ height: 100%;
 .cta{
   margin-top: 20px;
   padding: 10px;
+  text-align: center;
+
   a{
+
     text-decoration: none;
     color: #ffff;
     font-weight: bold;
@@ -200,6 +215,12 @@ height: 100%;
     background-color: transparent;
     font-size: 16px;
   }
+}
+/**
+bottom menu for mobile nav
+*/
+.bottom-nav{
+  display: none;
 }
 /** Animation rules*/
 @keyframes drop-down {

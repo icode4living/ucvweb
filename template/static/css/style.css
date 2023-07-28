@@ -71,6 +71,14 @@ body, html {
   color: rgb(4, 86, 148);
 }
 
+.container {
+  margin-left: 2rem;
+}
+
+.title {
+  margin: 0 auto;
+}
+
 /**Main nav**/
 .main-nav {
   background-color: rgb(4, 86, 148);
@@ -138,10 +146,10 @@ body, html {
 .hero-conatianer {
   position: absolute;
   top: 25%;
-  left: 2rem;
-  width: 80%;
+  left: 10%;
 }
 .hero-conatianer h1 {
+  text-align: center;
   color: #E4E8F0;
   font-size: 3.5em;
 }
@@ -161,6 +169,7 @@ body, html {
 .cta {
   margin-top: 20px;
   padding: 10px;
+  text-align: center;
 }
 .cta a {
   text-decoration: none;
@@ -182,6 +191,13 @@ body, html {
   border: 2px solid #fff;
   background-color: transparent;
   font-size: 16px;
+}
+
+/**
+bottom menu for mobile nav
+*/
+.bottom-nav {
+  display: none;
 }
 
 /** Animation rules*/
