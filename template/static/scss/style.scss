@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 $main-color:#E4E8F0;
 $tetiary-color:#03122B;
 $primary-color:rgb(4, 86, 148);
@@ -28,7 +29,9 @@ $margin: 30px;
   background-color: $secondary-color;
   color: $main-color;
 }
-
+@mixin typeface{
+  font-family: 'Montserrat', sans-serif;
+}
 @mixin dark-bg{
   background-color: $tetiary-color;
   color: $main-color
@@ -97,12 +100,21 @@ left:2rem;
 }
 .container{
   margin-left: $margin-val;
+  margin-top: $margin-val;
 }
 .title{
   margin: 0 auto;
+  h1{
+    font-size: $header-size;
+  }
 }
 .center{
-  
+  text-align: center;
+}
+.grid-col-3{
+  display: grid;
+grid-template-columns:repeat(3, 400px);
+gap:1rem;
 }
 /**Main nav**/
 .main-nav{
@@ -167,7 +179,8 @@ height: 100%;
 .hero-conatianer{
   position: absolute;
   top:25%;
-  left: 10%;
+  left: 5%;
+  right:5%;
   //width: calc(100% - 20%);
   
   h1{
@@ -221,6 +234,42 @@ bottom menu for mobile nav
 */
 .bottom-nav{
   display: none;
+}
+/*Services */
+.services{
+  padding-top: 50px;
+}
+.service-item{
+  @include typeface();
+
+  height:250px;
+  @include white-card();
+  h2{
+    text-align: center;
+    color:$secondary-color;
+        padding:8px 12px;
+
+  }
+ /* h2 > *{
+    @include typeface();
+  }*/
+  p{
+    color:$text-color;
+    line-height: 32px;
+    font-size: 16px;
+   
+
+  }
+ 
+  a, p{
+    text-align:center !important;
+    @include typeface();
+  }
+}
+.read-more{
+  text-decoration: none;
+  color:$text-color;
+  @include typeface();
 }
 /** Animation rules*/
 @keyframes drop-down {

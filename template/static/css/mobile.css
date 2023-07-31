@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
 :root {
   font-family: "Inter", sans-serif;
 }
@@ -73,10 +74,24 @@ body, html {
 
 .container {
   margin-left: 2rem;
+  margin-top: 2rem;
 }
 
 .title {
   margin: 0 auto;
+}
+.title h1 {
+  font-size: 2em;
+}
+
+.center {
+  text-align: center;
+}
+
+.grid-col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  gap: 1rem;
 }
 
 /**Main nav**/
@@ -146,7 +161,8 @@ body, html {
 .hero-conatianer {
   position: absolute;
   top: 25%;
-  left: 10%;
+  left: 5%;
+  right: 5%;
 }
 .hero-conatianer h1 {
   text-align: center;
@@ -200,6 +216,41 @@ bottom menu for mobile nav
   display: none;
 }
 
+/*Services */
+.services {
+  padding-top: 50px;
+}
+
+.service-item {
+  font-family: "Montserrat", sans-serif;
+  height: 250px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* h2 > *{
+     @include typeface();
+   }*/
+}
+.service-item h2 {
+  text-align: center;
+  color: #020f2a;
+  padding: 8px 12px;
+}
+.service-item p {
+  color: #0f0f0f;
+  line-height: 32px;
+  font-size: 16px;
+}
+.service-item a, .service-item p {
+  text-align: center !important;
+  font-family: "Montserrat", sans-serif;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #0f0f0f;
+  font-family: "Montserrat", sans-serif;
+}
+
 /** Animation rules*/
 @keyframes drop-down {
   to {
@@ -245,6 +296,7 @@ bottom menu for mobile nav
     margin: 0 auto;
     flex-wrap: wrap;
     left: 0;
+    right: 0;
   }
   .hero-conatianer h1 {
     font-size: 2em;
@@ -259,6 +311,21 @@ bottom menu for mobile nav
   }
   .main-cta {
     text-align: center;
+  }
+  .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .services {
+    padding-top: 10px;
+  }
+  .service-item {
+    margin-bottom: 20px;
+  }
+  .grid-col-3 {
+    display: block;
+    grid-template-columns: repeat(1, auto);
+    gap: 5px;
   }
 }
 

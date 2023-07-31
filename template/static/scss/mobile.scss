@@ -20,6 +20,7 @@ width: 100%;
         margin:0 auto;
         flex-wrap: wrap;
         left: 0;
+        right:0;
         h1{
             font-size: 2em;
             line-height: 2.5rem;
@@ -36,4 +37,19 @@ width: 100%;
     .main-cta{
         text-align: center;
     }
+    .container{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .services{
+        padding-top: 10px;
+      }
+      .service-item{
+        margin-bottom:20px;
+      }
+      .grid-col-3{
+        display: block;
+      grid-template-columns:repeat(1, auto);
+      gap:5px;
+      }
 }
